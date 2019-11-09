@@ -153,7 +153,7 @@ namespace TodoServer.Controllers
                 var userEntity = _repository.User.GetUserById(id);
                 if(userEntity == null)
                 {
-                    _logger.LogError($"User with id: {id}, hasn't been found in db.");
+                    _logger.LogError($"User with id: {id}, was not found in database.");
                     return NotFound();
                 }
 

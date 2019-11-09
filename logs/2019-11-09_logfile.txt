@@ -1,0 +1,4 @@
+2019-11-09 11:54:33.6862 INFO Returned user with details for id: f0b59d75-749c-4725-ad3d-8f9075f07581
+2019-11-09 12:01:49.1876 INFO Returned task with id: 3
+2019-11-09 12:47:47.0196 INFO Returned task with id: 3
+2019-11-09 13:12:58.9032 INFO Returned task with id: 6

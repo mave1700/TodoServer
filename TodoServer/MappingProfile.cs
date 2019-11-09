@@ -16,6 +16,10 @@ namespace TodoServer
 
             CreateMap<UserForUpdateDto, User>();
 
+            CreateMap<TaskForCreationDto, Task>();
+
+            CreateMap<TaskForUpdateDto, Task>();
+
         }
     }
 }
