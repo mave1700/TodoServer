@@ -38,6 +38,11 @@ namespace Repository
                 .FirstOrDefault();
         }
 
+        public User GetUserByUsername(string userName)
+        {
+            return FindByCondition(user => user.Username.Equals(userName))
+                .FirstOrDefault();
+        }
 
 
         public User GetUserWithDetails(Guid userId)

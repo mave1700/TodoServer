@@ -1,6 +1,0 @@
-2019-10-19 14:52:41.0768 DEBUG Something went wrong inside GetAllOwners action: Access denied for user 'user1'@'localhost' (using password: YES)
-2019-10-19 14:54:35.6310 DEBUG Something went wrong inside GetAllOwners action: Access denied for user 'user1'@'localhost' (using password: YES)
-2019-10-19 15:03:17.5127 DEBUG Something went wrong inside GetAllOwners action: Access denied for user 'user1'@'localhost' to database 'todo'
-2019-10-19 15:10:14.8069 DEBUG Something went wrong inside GetAllOwners action: Access denied for user 'user1'@'localhost' to database 'todo'
-2019-10-19 15:14:12.2603 DEBUG Something went wrong inside GetAllOwners action: Access denied for user 'user1'@'localhost' to database 'todo'
-2019-10-19 15:25:04.1526 DEBUG Something went wrong inside GetAllOwners action: Access denied for user 'user1'@'localhost' to database 'todo'

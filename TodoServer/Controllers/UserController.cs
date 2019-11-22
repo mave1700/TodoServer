@@ -37,7 +37,7 @@ namespace TodoServer.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetAllOwners action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetAllUsers action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -65,7 +65,37 @@ namespace TodoServer.Controllers
 
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetOwnerById action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetUserById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+
+
+        }
+
+        [HttpGet("username/{userName}", Name = "UserByUsername")]
+        public IActionResult GetUserByUsername(string userName)
+        {
+            try
+            {
+                var user = _repository.User.GetUserByUsername(userName);
+
+                if (user == null)
+                {
+                    _logger.LogError($"User with user name: {userName} hasn't been found in database");
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogInfo($"Returned user with user name: {userName}");
+
+                    var userResult = _mapper.Map<UserDto>(user);
+                    return Ok(userResult);
+                }
+            }
+
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetUserByUsername action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
 
@@ -73,7 +103,7 @@ namespace TodoServer.Controllers
         }
 
         [HttpGet("{id}/account")]
-        public IActionResult GetOwnerWithDetails(Guid id)
+        public IActionResult GetUserWithDetails(Guid id)
         {
             try
             {
@@ -94,7 +124,7 @@ namespace TodoServer.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetOwnerWithDetails action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetUserWithDetails action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

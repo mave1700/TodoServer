@@ -54,13 +54,15 @@ namespace TodoServer
 
             app.UseHttpsRedirection();
 
+            app.UseStaticFiles();
+
+            app.UseCors("CorsPolicy");
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             }
-            );
-
-            app.UseStaticFiles();
+);
         }
     }
 }
