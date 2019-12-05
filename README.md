@@ -1,5 +1,5 @@
 # TodoServer
-This is an API that provides CRUD-operations for users and tasks in database. Relies on database created in MySQL
+This is an API that provides CRUD-operations users and tasks in database. Works together with external database created in MySQL. Used in TodoAdminWebsite.
 
 ## Techniques ##
 * .NET Core 2.2
