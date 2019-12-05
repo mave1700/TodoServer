@@ -8,7 +8,6 @@ namespace Contracts
     {
         IEnumerable<User> GetAllUsers();
         User GetUserById(Guid userId);
-        User GetUserByUsername(string userId);
 
         User GetUserWithDetails(Guid userId);
 
